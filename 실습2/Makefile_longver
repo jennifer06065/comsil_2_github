@@ -1,0 +1,9 @@
+exe : main.o Output.o String_Manipulation.o
+	gcc -o exe main.o Output.o String_Manipulation.o
+main.o : main.c
+	gcc -c -o main.o main.c
+Output.o : Output.c
+	gcc -c -o Output.o Output.c
+
+clean:
+	rm *.o exe
